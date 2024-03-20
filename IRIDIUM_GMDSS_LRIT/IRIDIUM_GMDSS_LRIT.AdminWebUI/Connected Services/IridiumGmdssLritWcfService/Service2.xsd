@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ivats.kemilink.com/IridiumGmdssLritWcfService/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" />
+  <xs:element name="GetTerminalStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTerminalStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" minOccurs="0" name="GetTerminalStatusResult" nillable="true" type="q1:GatewayServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterNewTerminal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imoNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterNewTerminalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" minOccurs="0" name="RegisterNewTerminalResult" nillable="true" type="q2:GatewayServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeInterval">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intervalInMinutes" type="xs:int" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeIntervalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" minOccurs="0" name="ChangeIntervalResult" nillable="true" type="q3:GatewayServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnDemandPoll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnDemandPollResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" minOccurs="0" name="OnDemandPollResult" nillable="true" type="q4:GatewayServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopReporting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopReportingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" minOccurs="0" name="StopReportingResult" nillable="true" type="q5:GatewayServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeregisterTerminal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeregisterTerminalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" minOccurs="0" name="DeregisterTerminalResult" nillable="true" type="q6:GatewayServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+SMSC Endpoints
+	Dev 10.1.27.11  SMS Server Public NAT 12.47.179.113
+	
+	Prod 10.1.23.11  SMS Server Public NAT 12.47.179.111
+
+
+
+SMPP userid	KEMISMPP
+SMPP password	7Wbx61MM
+LRIT short code	*993003

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ivats.kemilink.com/IridiumGmdssLritWcfService/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ivats.kemilink.com/IridiumGmdssLritWcfService/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ivats.kemilink.com/IridiumGmdssLritWcfService/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IRIDIUM_GMDSS_LRIT.Core.WcfService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetTerminalStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetTerminalStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterNewTerminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewTerminal" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterNewTerminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ChangeInterval_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeInterval" />
+  </wsdl:message>
+  <wsdl:message name="IService_ChangeInterval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeIntervalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_OnDemandPoll_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnDemandPoll" />
+  </wsdl:message>
+  <wsdl:message name="IService_OnDemandPoll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnDemandPollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_StopReporting_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopReporting" />
+  </wsdl:message>
+  <wsdl:message name="IService_StopReporting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopReportingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeregisterTerminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeregisterTerminal" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeregisterTerminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeregisterTerminalResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetTerminalStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetTerminalStatus" message="tns:IService_GetTerminalStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetTerminalStatusResponse" message="tns:IService_GetTerminalStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewTerminal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterNewTerminal" message="tns:IService_RegisterNewTerminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterNewTerminalResponse" message="tns:IService_RegisterNewTerminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeInterval">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ChangeInterval" message="tns:IService_ChangeInterval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ChangeIntervalResponse" message="tns:IService_ChangeInterval_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnDemandPoll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/OnDemandPoll" message="tns:IService_OnDemandPoll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/OnDemandPollResponse" message="tns:IService_OnDemandPoll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopReporting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/StopReporting" message="tns:IService_StopReporting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/StopReportingResponse" message="tns:IService_StopReporting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeregisterTerminal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeregisterTerminal" message="tns:IService_DeregisterTerminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeregisterTerminalResponse" message="tns:IService_DeregisterTerminal_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTerminalStatus">
+      <soap:operation soapAction="http://tempuri.org/IService/GetTerminalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewTerminal">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterNewTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeInterval">
+      <soap:operation soapAction="http://tempuri.org/IService/ChangeInterval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnDemandPoll">
+      <soap:operation soapAction="http://tempuri.org/IService/OnDemandPoll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopReporting">
+      <soap:operation soapAction="http://tempuri.org/IService/StopReporting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeregisterTerminal">
+      <soap:operation soapAction="http://tempuri.org/IService/DeregisterTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://ivats.kemilink.com/IridiumGmdssLritWcfService/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

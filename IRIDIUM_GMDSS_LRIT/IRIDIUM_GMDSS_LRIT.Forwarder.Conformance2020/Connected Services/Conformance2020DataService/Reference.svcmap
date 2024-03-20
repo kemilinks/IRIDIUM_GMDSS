@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="38f39273-54e4-46ed-b473-4c3279494d44" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Conformance2020Service.xsd" MetadataType="Schema" ID="ab562e4d-2292-4aa5-8c1e-6d2e77ee2b7f" SourceId="1" SourceUrl="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Conformance2020Service1.xsd" MetadataType="Schema" ID="6e1510fb-a083-497f-a91a-034b0ea408ed" SourceId="1" SourceUrl="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Conformance2020Service.disco" MetadataType="Disco" ID="c4cead5f-7787-4b15-bd39-549cbdf856a0" SourceId="1" SourceUrl="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc?disco" />
+    <MetadataFile FileName="Conformance2020Service2.xsd" MetadataType="Schema" ID="73c261db-c8f1-4df7-8bf5-ca3e5b052a87" SourceId="1" SourceUrl="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Conformance2020Service3.xsd" MetadataType="Schema" ID="c817e5c2-26cb-41ed-8ed3-70addbc0da77" SourceId="1" SourceUrl="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Conformance2020Service.wsdl" MetadataType="Wsdl" ID="e88d6510-9494-4e5b-9247-698eda6d8e71" SourceId="1" SourceUrl="http://myanmardof.ivats.com/CONFORMANCE2020.Receiver.Service/Conformance2020Service.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

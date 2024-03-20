@@ -1,0 +1,22 @@
+lrit_examples.mt_command_set_ack_poll
+MSG: F0 FF 12 D6 87 01 E0 5A 01 FF
+11110000111111110001001011010110100001110000000111100000010110100000000111111111 (80 bits)
+
+8 bit header:           11110000
+2 bit message:          11
+1 bit poll position:    1
+1 bit Set IMO:          1
+1 bit Set Offset:       1
+1 bit Set Timer:        1
+1 bit Set Reduced:      1
+1 bit Ack:              1
+24 bit IMO Number:      000100101101011010000111
+2 bit Reserved:         00
+11 bit Offset:          00000111100
+13 bit Timer:           0000101101000
+1 bit Reduced:          0
+3 bit Reserved:         000
+1 bit Set Responsible:  0
+1 bit Responsible:      1
+8 bit Version:          11111111
+--------------------------------------------------------------------------------------------

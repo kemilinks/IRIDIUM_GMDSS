@@ -1,0 +1,18 @@
+
+[ RUN      ] lrit_examples.mo_command_null_report_resp_lost
+             CFG IMO=0000000 Offset=0 Timer=0 Reduced=N
+             GNSS 55°49.151N 012°29.291E 2024-02-22 11:01:17
+             MSG: { F0 C0 00 00 00 00 00 00 00 E0 }
+             MSG: { F0 4D F1 20 31 D3 D9 59 60 00 }
+             SMS: { CC 0A F0 C0 00 00 00 00 00 00 00 E0 CC 0A F0 4D F1 20 31 D3 D9 59 60 00 }
+[       OK ] lrit_examples.mo_command_null_report_resp_lost (0 ms)
+
+[ RUN      ] lrit_examples.mo_report_interval_xxx
+             LtH=0 LtD=29 LtM=57 LtS=3
+             LgH=1 LgD=90 LgM=3 LgS=9
+             Lat=29952000 Lon=4204911296 TCm=0 Td=17 Th=18 Tm=12
+             My pos: 29°57.120N 090°03.360W
+             Their pos: 55°49.000N 012°29.001E
+             LtH=0 LtD=55 LtM=49 LtS=0
+             LgH=0 LgD=12 LgM=29 LgS=0
+[       OK ] lrit_examples.mo_report_interval_xxx (0 ms)

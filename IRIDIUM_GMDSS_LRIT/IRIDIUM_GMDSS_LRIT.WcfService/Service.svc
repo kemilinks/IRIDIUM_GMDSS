@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="IRIDIUM_GMDSS_LRIT.WcfService.Service" CodeBehind="Service.svc.cs" %>

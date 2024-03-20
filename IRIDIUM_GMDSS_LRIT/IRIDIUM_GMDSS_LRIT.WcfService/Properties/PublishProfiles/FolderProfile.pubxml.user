@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.WcfService\bin\app.publish\</_PublishTargetUrl>
+    <History>True|2024-03-14T11:58:26.2193844Z;True|2024-03-14T10:42:15.4700795+00:00;True|2024-03-05T07:47:10.4699853+00:00;True|2024-03-05T04:51:55.8647251+00:00;True|2024-03-05T02:21:20.6231755+00:00;True|2024-03-05T02:14:25.6473566+00:00;True|2024-03-04T06:26:43.3236635+00:00;True|2024-03-04T06:13:56.5783769+00:00;True|2024-03-04T05:28:57.2060677+00:00;True|2024-03-04T02:41:01.8223867+00:00;True|2024-03-04T01:20:30.7700449+00:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/IRIDIUM_GMDSS_LRIT.Core.dll">
+      <publishTime>03/15/2024 06:39:42</publishTime>
+    </File>
+    <File Include="bin/IRIDIUM_GMDSS_LRIT.Core.pdb">
+      <publishTime>03/15/2024 06:39:42</publishTime>
+    </File>
+    <File Include="bin/IRIDIUM_GMDSS_LRIT.WcfService.dll">
+      <publishTime>03/15/2024 06:39:42</publishTime>
+    </File>
+    <File Include="bin/IRIDIUM_GMDSS_LRIT.WcfService.pdb">
+      <publishTime>03/15/2024 06:39:42</publishTime>
+    </File>
+    <File Include="bin/KemiAppCommon.dll">
+      <publishTime>09/30/2019 02:01:30</publishTime>
+    </File>
+    <File Include="bin/KemiLogger.dll">
+      <publishTime>09/30/2019 02:01:30</publishTime>
+    </File>
+    <File Include="Service.svc">
+      <publishTime>03/04/2024 01:01:22</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/04/2024 02:41:01</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
