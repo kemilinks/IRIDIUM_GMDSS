@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IRIDIUM_GMDSS_LRIT.AdminWebUI.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace IRIDIUM_GMDSS_LRIT.AdminWebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session[UIKeys._AUTHENTICATED_USER] == null)
+                Response.Redirect("Login.aspx");
         }
     }
 }

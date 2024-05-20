@@ -1,4 +1,5 @@
-﻿using IRIDIUM_GMDSS_LRIT.Core.Entity.UI;
+﻿using IRIDIUM_GMDSS_LRIT.AdminWebUI.Data;
+using IRIDIUM_GMDSS_LRIT.Core.Entity.UI;
 using IRIDIUM_GMDSS_LRIT.Core.Mgr;
 using IRIDIUM_GMDSS_LRIT.Core.Utility;
 using System;
@@ -15,7 +16,9 @@ namespace IRIDIUM_GMDSS_LRIT.AdminWebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session[UIKeys._AUTHENTICATED_USER] == null)
+                Response.Redirect("Login.aspx");
+                
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)

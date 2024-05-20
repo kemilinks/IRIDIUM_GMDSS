@@ -10,3 +10,5 @@ E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Fo
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020.csproj.CopyComplete
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020.dll
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020.pdb
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020\bin\Debug\KemilinksNotification.dll
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020\bin\Debug\KemilinksNotification.pdb

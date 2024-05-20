@@ -18,6 +18,9 @@ textarea {
     max-width: 280px;
 }
 
+.gridView td{
+    padding: 5px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

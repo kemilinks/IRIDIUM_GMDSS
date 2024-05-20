@@ -5,8 +5,9 @@ E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Fo
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\bin\Debug\KemiAppCommon.dll
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\bin\Debug\KemiLogger.dll
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\bin\Debug\IRIDIUM_GMDSS_LRIT.Core.pdb
-E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Console.csproj.AssemblyReference.cache
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Console.csproj.CoreCompileInputs.cache
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Console.csproj.CopyComplete
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Console.exe
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\obj\Debug\IRIDIUM_GMDSS_LRIT.Forwarder.Console.pdb
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\bin\Debug\KemilinksNotification.dll
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.Forwarder.Console\bin\Debug\KemilinksNotification.pdb

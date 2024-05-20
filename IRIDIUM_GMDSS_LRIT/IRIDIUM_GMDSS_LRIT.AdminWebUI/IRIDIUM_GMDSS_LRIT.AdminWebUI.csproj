@@ -142,6 +142,8 @@
     <None Include="Connected Services\IridiumGmdssLritWcfService\Service2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Properties\DataSources\IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -175,6 +177,7 @@
     <Content Include="DataReport.aspx" />
     <Content Include="SendCommandToTerminal.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="Terminals.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -195,6 +198,8 @@
     <Compile Include="DataCommand.aspx.designer.cs">
       <DependentUpon>DataCommand.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Data\AuthenticatedUser.cs" />
+    <Compile Include="Data\UIKeys.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +209,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataReport.aspx.cs">
@@ -233,6 +252,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Terminals.aspx.cs">
+      <DependentUpon>Terminals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terminals.aspx.designer.cs">
+      <DependentUpon>Terminals.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

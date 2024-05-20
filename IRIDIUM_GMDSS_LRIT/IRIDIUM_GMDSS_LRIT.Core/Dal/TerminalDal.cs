@@ -125,7 +125,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Dal
             }
             catch (Exception ex)
             {
-                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Unable to Get C Terminal by Terminal Id", ex.Message);
+                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Unable to Get Terminal by Terminal Id", ex.Message);
             }
             return terminal;
         }
@@ -155,9 +155,39 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Dal
             }
             catch (Exception ex)
             {
-                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Unable to Get C Terminal by msisdn", ex.Message);
+                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Unable to Get Terminal by msisdn", ex.Message);
             }
             return terminal;
+        }
+
+        public List<Terminal> GetTerminals()
+        {
+            List<Terminal> terminals = new List<Terminal>();
+            try
+            {
+                string sql = DEFAULT_SELECT_STATEMENT;
+                using (SqlConnection Connection = new SqlConnection(CommonDal.GetDBConnectionString()))
+                {
+                    Connection.Open();
+                    using (SqlCommand cmd = new SqlCommand(sql, Connection))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Terminal terminal = ConstructTerminal(reader);
+                                if (terminal != null)
+                                    terminals.Add(terminal);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Unable to Get All Terminal", ex.Message);
+            }
+            return terminals;
         }
 
         private Terminal ConstructTerminal(IDataReader reader)

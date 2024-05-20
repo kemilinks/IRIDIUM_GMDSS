@@ -75,6 +75,7 @@
     <Compile Include="Mgr\DataMgr.cs" />
     <Compile Include="Mgr\DataReportMgr.cs" />
     <Compile Include="Mgr\TerminalMgr.cs" />
+    <Compile Include="ProcessingTask\MonitorSmmpClientTask.cs" />
     <Compile Include="ProcessingTask\PositionForwaderTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\CommonUtility.cs" />

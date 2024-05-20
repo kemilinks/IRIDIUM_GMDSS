@@ -749,6 +749,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
             this.Text = "Kemilinks Iridium GMDSS LRIT SMPP Client";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SmppClient_FormClosing);
             this.Load += new System.EventHandler(this.SmppClient_Load);
+            this.Shown += new System.EventHandler(this.SmppClientFrm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

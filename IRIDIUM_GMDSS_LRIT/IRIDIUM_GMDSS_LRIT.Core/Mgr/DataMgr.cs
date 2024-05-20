@@ -100,6 +100,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
                         report.ReceivedTimestamp = DateTime.UtcNow;
                         report.Source = source;
                         report.Status = ReportStatus.New;
+                        report.Remarks = string.Empty;
 
                         this.dataReportMgr.InsertDataReport(report);
                     }

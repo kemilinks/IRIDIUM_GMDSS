@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM_GMDSS_LRIT.AdminWebUI\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2024-03-07T05:35:56.4209912Z;True|2024-02-29T07:53:13.5715435+00:00;True|2024-02-29T01:45:28.8950841+00:00;True|2024-02-29T01:30:01.2410781+00:00;True|2024-02-29T01:01:00.7184540+00:00;True|2024-02-29T00:57:43.8218426+00:00;True|2024-02-29T00:26:25.3863557+00:00;True|2024-02-29T00:18:23.4333899+00:00;True|2024-02-29T00:10:33.1381708+00:00;True|2024-02-28T09:43:25.0179627+00:00;True|2024-02-28T09:40:41.8575004+00:00;True|2024-02-28T09:14:54.1734591+00:00;</History>
+    <History>True|2024-05-20T04:27:35.9052691Z;True|2024-05-20T03:39:18.3615621+00:00;True|2024-05-20T03:33:34.5094988+00:00;True|2024-05-20T02:18:29.0891463+00:00;True|2024-03-07T05:35:56.4209912+00:00;True|2024-02-29T07:53:13.5715435+00:00;True|2024-02-29T01:45:28.8950841+00:00;True|2024-02-29T01:30:01.2410781+00:00;True|2024-02-29T01:01:00.7184540+00:00;True|2024-02-29T00:57:43.8218426+00:00;True|2024-02-29T00:26:25.3863557+00:00;True|2024-02-29T00:18:23.4333899+00:00;True|2024-02-29T00:10:33.1381708+00:00;True|2024-02-28T09:43:25.0179627+00:00;True|2024-02-28T09:40:41.8575004+00:00;True|2024-02-28T09:14:54.1734591+00:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -21,19 +21,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/16/2019 12:33:30</publishTime>
     </File>
     <File Include="bin/IRIDIUM_GMDSS_LRIT.AdminWebUI.dll">
-      <publishTime>03/07/2024 05:35:55</publishTime>
+      <publishTime>05/20/2024 04:27:35</publishTime>
     </File>
     <File Include="bin/IRIDIUM_GMDSS_LRIT.AdminWebUI.pdb">
-      <publishTime>03/07/2024 05:35:55</publishTime>
+      <publishTime>05/20/2024 04:27:35</publishTime>
     </File>
     <File Include="bin/IRIDIUM_GMDSS_LRIT.Core.dll">
-      <publishTime>03/07/2024 05:35:55</publishTime>
+      <publishTime>05/20/2024 03:33:33</publishTime>
     </File>
     <File Include="bin/IRIDIUM_GMDSS_LRIT.Core.pdb">
-      <publishTime>03/07/2024 05:35:55</publishTime>
+      <publishTime>05/20/2024 03:33:33</publishTime>
     </File>
     <File Include="bin/KemiAppCommon.dll">
       <publishTime>09/30/2019 02:01:30</publishTime>
+    </File>
+    <File Include="bin/KemilinksNotification.dll">
+      <publishTime>10/16/2021 08:46:20</publishTime>
+    </File>
+    <File Include="bin/KemilinksNotification.pdb">
+      <publishTime>10/08/2021 03:56:59</publishTime>
     </File>
     <File Include="bin/KemiLogger.dll">
       <publishTime>09/30/2019 02:01:30</publishTime>
@@ -240,13 +246,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/28/2024 07:12:21</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>02/28/2024 07:12:19</publishTime>
+      <publishTime>05/20/2024 02:23:32</publishTime>
     </File>
     <File Include="DataCommand.aspx">
-      <publishTime>03/07/2024 05:34:46</publishTime>
+      <publishTime>05/20/2024 02:17:49</publishTime>
     </File>
     <File Include="DataReport.aspx">
-      <publishTime>02/29/2024 01:45:03</publishTime>
+      <publishTime>05/20/2024 02:24:06</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>02/29/2024 01:03:52</publishTime>
@@ -271,6 +277,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Global.asax">
       <publishTime>02/28/2024 07:12:19</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>05/20/2024 02:53:20</publishTime>
+    </File>
+    <File Include="Logout.aspx">
+      <publishTime>05/20/2024 03:37:15</publishTime>
     </File>
     <File Include="Properties/DataSources/IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse.datasource">
       <publishTime>03/06/2024 02:12:38</publishTime>
@@ -369,16 +381,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/29/2024 01:44:01</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>02/29/2024 01:04:05</publishTime>
+      <publishTime>05/20/2024 04:26:10</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>02/28/2024 07:12:22</publishTime>
+    </File>
+    <File Include="Terminals.aspx">
+      <publishTime>05/20/2024 02:17:37</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>02/28/2024 07:12:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/06/2024 02:21:51</publishTime>
+      <publishTime>05/20/2024 03:33:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

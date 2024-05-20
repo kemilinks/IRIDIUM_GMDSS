@@ -16,6 +16,7 @@ using Inetlab.SMPP.Logging;
 using Inetlab.SMPP.PDU;
 using IRIDIUM_GMDSS_LRIT.Core.Entity;
 using IRIDIUM_GMDSS_LRIT.Core.Mgr;
+using IRIDIUM_GMDSS_LRIT.Core.Utility;
 using KemilinksNotification;
 using SMS = Inetlab.SMPP.SMS;
 
@@ -29,16 +30,17 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
 
         private readonly Inetlab.SMPP.SmppClient _client;
         private bool logToFile;
-        private string logFileName;
         private bool isGracefullyDisconnect;
         private string adminSmsNumber;
         
 
-        private string _DATETIME_FORMAT_FOR_FILENAME = "dd_MMM_yyyy_HH_mm_ss";
         private string _DATETIME_FORMAT = "dd-MMM-yyyy HH:mm:ss";
+        
+        
 
         private DataCommandMgr dataCommandMgr;
         private DataMgr dataMgr;
+        private SystemConfigUtility sysConfigUtility;
 
         public SmppClientFrm()
         {
@@ -89,6 +91,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
 
             this.dataCommandMgr = new DataCommandMgr();
             this.dataMgr = new DataMgr();
+            this.sysConfigUtility = new SystemConfigUtility();
             this.isGracefullyDisconnect = false;
         }
 
@@ -125,7 +128,6 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
                 this.logToFile = false;
 
             DateTime utcNow = DateTime.UtcNow;
-            this.logFileName = ConfigurationManager.AppSettings["LogFileLocation"].ToString() + utcNow.ToString(_DATETIME_FORMAT_FOR_FILENAME) + ".txt";
         }
 
         private void OnCertificateValidation(object sender, CertificateValidationEventArgs args)
@@ -326,8 +328,8 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
                         _messageComposer.AddMessage(data);
                         string logLine = string.Format("DeliverSm part received: Sequence: {0}, SourceAddress: {1}, Concatenation ( {2} ) Coding: {3}, Text: {4}", data.Header.Sequence, data.SourceAddress, data.Concatenation, data.DataCoding, _client.EncodingMapper.GetMessageText(data));
                         _log.Info(logLine);
-                        if(this.logToFile)
-                            System.IO.File.AppendAllText(this.logFileName, GetTimesttampInStringForLogging() + logLine + Environment.NewLine);
+                        if (this.logToFile)
+                            KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, logLine, string.Empty);
                     }
                     else
                     {
@@ -336,7 +338,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
                             string logLine = string.Format("DeliverSm received : Sequence: {0}, SourceAddress: {1}, Coding: {2}, Text: {3}", data.Header.Sequence, data.SourceAddress, data.DataCoding, _client.EncodingMapper.GetMessageText(data));
                             _log.Info(logLine);
                             if (this.logToFile)
-                                System.IO.File.AppendAllText(this.logFileName, GetTimesttampInStringForLogging() + logLine + Environment.NewLine);
+                                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, logLine, string.Empty);
                         }
                         else if (data.DataCoding == DataCodings.OctetUnspecified)
                         {
@@ -345,7 +347,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
                             string logLine = string.Format("DeliverSm received : Sequence: {0}, SourceAddress: {1}, Coding: {2}, Text: {3}", data.Header.Sequence, data.SourceAddress, data.DataCoding, messageDataHexString);
                             _log.Info(logLine);
                             if (this.logToFile)
-                                System.IO.File.AppendAllText(this.logFileName, GetTimesttampInStringForLogging() + logLine + Environment.NewLine);
+                                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, logLine, string.Empty);
                             
                             this.dataMgr.ProcessIncomingData(logLine, tbSrcAdr.Text);
                         }
@@ -407,6 +409,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
         private void client_evEnquireLink(object sender, EnquireLink data)
         {
             _log.Info("EnquireLink received");
+            this.sysConfigUtility.UpdateLastEnquireLinkReceivedDateTime(CommonUtility.GetCurrentTimestmap());
         }
 
         private void client_evUnBind(object sender, UnBind data)
@@ -416,6 +419,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
 
         private async void bConnect_Click(object sender, EventArgs e)
         {
+            this.sysConfigUtility.UpdateLastSmppServerConnectionDateTime(CommonUtility.GetCurrentTimestmap());
             this.isGracefullyDisconnect = false;
             await Connect();
             tmSendCommandToTerminal.Start();
@@ -831,6 +835,11 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
                 System.IO.File.AppendAllText(this.logFileName, "Unable to send SMS @  " + DateTime.UtcNow.ToString("dd MMM yyyy HH:mm:ss") + " of Content: " + smsContent + ". Exception: " + ex.Message);
 
             }
+        }
+
+        private void SmppClientFrm_Shown(object sender, EventArgs e)
+        {
+            bConnect.PerformClick();
         }
     }
 }

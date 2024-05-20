@@ -31,6 +31,11 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
             return this.terminalDal.GetTerminal(msisdn);
         }
 
+        public List<Terminal> GetTerminals()
+        {
+            return this.terminalDal.GetTerminals();
+        }
+
         public bool InsertNewTerminal(string msisnd, string imoNumber, string description)
         {
             int terminalId = 0;

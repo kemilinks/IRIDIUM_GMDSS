@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-md-12">
             <asp:GridView ID="gvDataReport" runat="server" AutoGenerateColumns="False" GridLines="Vertical" BackColor="White" 
-                  BorderColor="#DEDFDE" BorderStyle="Solid" BorderWidth="1px" CellPadding="10" ForeColor="Black">
+                  BorderColor="#DEDFDE" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" class="gridView">
                 <AlternatingRowStyle BackColor="#FFCC66" />
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" />
