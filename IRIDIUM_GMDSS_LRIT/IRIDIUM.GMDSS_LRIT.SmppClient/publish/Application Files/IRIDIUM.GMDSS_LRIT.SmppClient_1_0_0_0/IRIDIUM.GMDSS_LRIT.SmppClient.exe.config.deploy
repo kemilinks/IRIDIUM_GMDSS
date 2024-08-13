@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <!--12.47.179.113 - TESTING | 12.47.179.111 - PRODUCTION-->
+    <add key="Host" value="12.47.179.113" />
+    <add key="Environment" value="TESTING ENVIRONMENT" />
+    <add key="Port" value="8010" />
+    <add key="SystemId" value="KEMISMPP" />
+    <add key="Password" value="7Wbx61MM" />
+    <add key="Ton" value="0" />
+    <add key="Npi" value="0" />
+    <add key="SystemType" value="" />
+    <add key="Originator" value="*993003" />
+    <add key="OriginatorTon" value="0" />
+    <add key="OriginatorNpi" value="0" />
+    <add key="Destination" value="881631760049" />
+    <add key="DestinationTon" value="1" />
+    <add key="DestinationNpi" value="1" />
+    <add key="LogToFile" value="Yes" />
+    <add key="LogFileLocation" value="E:\\Webdata\\Iridirum_SMSC\\Tops\\SMPPClient\\Logs\\" />
+    <add key="Admin_Sms_Number" value="6598203242" />
+  </appSettings>
+  <connectionStrings>
+    <add name="IRIDIUM_GMDSS_LRIT_2024_DBConnectionString" connectionString="Data Source=RYAN-T15-3RD;Initial Catalog=IRIDIUM_GMDSS_LRIT;Integrated Security=True" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <startup> 
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+  </startup>
+</configuration>

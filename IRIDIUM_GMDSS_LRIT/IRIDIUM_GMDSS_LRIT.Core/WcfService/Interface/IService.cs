@@ -28,6 +28,9 @@ namespace IRIDIUM_GMDSS_LRIT.Core.WcfService.Interface
         [OperationContract]
         GatewayServiceResponse DeregisterTerminal(string msisdn, string applicationId, string accessCode);
 
+        [OperationContract]
+        GatewayServiceResponse RegisterNewTerminalWithoutAdding(string msisdn, string imoNumber, string description, string applicationId, string accessCode);
+
 
     }
 }

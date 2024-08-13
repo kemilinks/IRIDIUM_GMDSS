@@ -832,8 +832,7 @@ namespace IRIDIUM.GMDSS_LRIT.SmppClient
             }
             catch (Exception ex)
             {
-                System.IO.File.AppendAllText(this.logFileName, "Unable to send SMS @  " + DateTime.UtcNow.ToString("dd MMM yyyy HH:mm:ss") + " of Content: " + smsContent + ". Exception: " + ex.Message);
-
+                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Unable to send SMS @  " + DateTime.UtcNow.ToString("dd MMM yyyy HH:mm:ss") + " of Content: " + smsContent + ". Exception: " + ex.Message, string.Empty);
             }
         }
 

@@ -43,6 +43,12 @@
   <wsdl:message name="IService_DeregisterTerminal_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeregisterTerminalResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_RegisterNewTerminalWithoutAdding_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewTerminalWithoutAdding" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterNewTerminalWithoutAdding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewTerminalWithoutAddingResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="GetTerminalStatus">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/GetTerminalStatus" message="tns:IService_GetTerminalStatus_InputMessage" />
@@ -67,6 +73,10 @@
     <wsdl:operation name="DeregisterTerminal">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeregisterTerminal" message="tns:IService_DeregisterTerminal_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DeregisterTerminalResponse" message="tns:IService_DeregisterTerminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewTerminalWithoutAdding">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterNewTerminalWithoutAdding" message="tns:IService_RegisterNewTerminalWithoutAdding_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterNewTerminalWithoutAddingResponse" message="tns:IService_RegisterNewTerminalWithoutAdding_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -118,6 +128,15 @@
     </wsdl:operation>
     <wsdl:operation name="DeregisterTerminal">
       <soap:operation soapAction="http://tempuri.org/IService/DeregisterTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewTerminalWithoutAdding">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterNewTerminalWithoutAdding" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

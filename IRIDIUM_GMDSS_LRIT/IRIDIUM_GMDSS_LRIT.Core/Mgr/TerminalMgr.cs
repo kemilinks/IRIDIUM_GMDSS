@@ -36,7 +36,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
             return this.terminalDal.GetTerminals();
         }
 
-        public bool InsertNewTerminal(string msisnd, string imoNumber, string description)
+        public bool InsertNewTerminal(string msisnd, string imoNumber, string description, string remark, string applicationIds)
         {
             int terminalId = 0;
             Terminal terminal = new Terminal();
@@ -45,13 +45,18 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
             terminal.DeactivationTimestamp = DateTime.MaxValue;
             terminal.Description = description;
             terminal.MSISDN = msisnd;
-            terminal.Remark = string.Empty;
+            terminal.Remark = remark;
             terminal.Status = TerminalStatus.Pending_Activation;
             terminal.IMONumber = imoNumber;
 
             this.terminalDal.InsertTerminal(terminal, out terminalId);
-            if (terminalId != 0)
+            if (terminalId != -1)
+            {
+                string[] parts = applicationIds.Split(',');
+                for(int i = 0; i < parts.Length; i++)
+                    this.terminalApplicationDal.InsertApplicationTerminal(terminalId, parts[i], AccessLevel.AllowAll);
                 return true;
+            }
             else
                 return false;
         }
@@ -137,7 +142,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
                 if (response.isSuccessful)
                 {
                     KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Register New Terminal", "Access level is Ok");
-                    if (this.InsertNewTerminal(msisdn, imoNumber, description))
+                    if (this.InsertNewTerminal(msisdn, imoNumber, description, string.Empty, applicationId))
                     {
                         KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Register New Terminal", "New terminal inserted.");
                         DataCommandMgr dataCommandMgr = new DataCommandMgr();
@@ -182,6 +187,56 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
             catch (Exception ex)
             {
                 KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Exception during RegisterNewTerminal.", ex.Message);
+                return new GatewayServiceResponse()
+                {
+                    gatewayResponse = Response.Fail,
+                    message = "Error occured at Gateway. Contact System Admin.",
+                    isSuccessful = true
+                };
+
+            }
+        }
+
+        public GatewayServiceResponse RegisterNewTerminalWithoutAdding(string msisdn, string imoNumber, string description, string applicationId, string accessCode)
+        {
+            KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Register New Terminal Without Adding", "msisdn: " + msisdn + ", imoNumber" + imoNumber + ", applicationId: " + applicationId + ", accessCode: " + accessCode);
+            AccessLevelMgr accessLevelMgr = new AccessLevelMgr();
+            try
+            {
+                GatewayServiceResponse response = accessLevelMgr.CheckAccessLevel(applicationId, accessCode);
+                if (response.isSuccessful)
+                {
+                    DataCommandMgr dataCommandMgr = new DataCommandMgr();
+                    if (dataCommandMgr.IssueRegistrationCommand(msisdn, imoNumber))
+                    {
+                        KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Register New Terminal Without Adding", "Registration Command Issued.");
+                        return new GatewayServiceResponse()
+                        {
+                            gatewayResponse = Response.Success,
+                            isSuccessful = true,
+                            message = string.Empty
+                        };
+                    }
+                    else
+                    {
+                        KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Register New Terminal Without Adding", "Registration Command NOT Issued.");
+                        return new GatewayServiceResponse()
+                        {
+                            gatewayResponse = Response.Fail,
+                            isSuccessful = false,
+                            message = "Unable to issue Activation Command. Contact System Admin."
+                        };
+                    }
+                }
+                else
+                {
+                    KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Register New Terminal Without Adding", "Failed at checking access level. GatewayResponse: " + response.gatewayResponse.ToString() + ", message: " + response.message);
+                    return response;
+                }
+            }
+            catch (Exception ex)
+            {
+                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Exception during RegisterNewTerminal Without Adding.", ex.Message);
                 return new GatewayServiceResponse()
                 {
                     gatewayResponse = Response.Fail,

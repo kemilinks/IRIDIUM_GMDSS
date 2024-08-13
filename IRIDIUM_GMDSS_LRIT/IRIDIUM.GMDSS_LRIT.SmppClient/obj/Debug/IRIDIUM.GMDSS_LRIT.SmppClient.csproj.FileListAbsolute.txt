@@ -17,3 +17,7 @@ E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.Sm
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\bin\Debug\KemilinksNotification.dll
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\bin\Debug\KemilinksNotification.pdb
 E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\bin\Debug\KemiAppCommon.dll
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\bin\Debug\IRIDIUM.GMDSS_LRIT.SmppClient.exe.manifest
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\bin\Debug\IRIDIUM.GMDSS_LRIT.SmppClient.application
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\obj\Debug\IRIDIUM.GMDSS_LRIT.SmppClient.exe.manifest
+E:\KemilinksProjects\IRIDIUM_GDMSS_LRIT\IRIDIUM_GMDSS_LRIT\IRIDIUM.GMDSS_LRIT.SmppClient\obj\Debug\IRIDIUM.GMDSS_LRIT.SmppClient.application

@@ -47,6 +47,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.ProcessingTask
                             {
                                 string logLine  = "Delivered to " + applicationWithAccessLevel.Application.Id + " - ";
                                 Console.WriteLine(logLine);
+                                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Forwarder", logLine);
                                 report.Remarks += logLine;
                                 this.dataReportMgr.UpdateDataReport(report);
                             }
@@ -54,6 +55,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.ProcessingTask
                             {
                                 string logLine = "Not Delivered to " + applicationWithAccessLevel.Application.Id + " due to " + forwarder.ForwardResult + " - ";
                                 Console.WriteLine(logLine);
+                                KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Forwarder", logLine);
                                 report.Remarks += logLine;
                                 this.dataReportMgr.UpdateDataReport(report);
                             }
@@ -67,6 +69,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.ProcessingTask
                     report.Status = ReportStatus.Processed;
                     string logLine = "Failed to process as terminal is not found with Terminal MSISDN: " + report.Source;
                     Console.WriteLine(logLine);
+                    KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.INFO, "Forwarder", logLine);
                     report.Remarks += logLine;
                     this.dataReportMgr.UpdateDataReport(report);
                 }

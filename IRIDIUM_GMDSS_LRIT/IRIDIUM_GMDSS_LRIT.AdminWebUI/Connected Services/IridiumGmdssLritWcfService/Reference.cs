@@ -50,6 +50,12 @@ namespace IRIDIUM_GMDSS_LRIT.AdminWebUI.IridiumGmdssLritWcfService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeregisterTerminal", ReplyAction="http://tempuri.org/IService/DeregisterTerminalResponse")]
         System.Threading.Tasks.Task<IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse> DeregisterTerminalAsync(string msisdn, string applicationId, string accessCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RegisterNewTerminalWithoutAdding", ReplyAction="http://tempuri.org/IService/RegisterNewTerminalWithoutAddingResponse")]
+        IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse RegisterNewTerminalWithoutAdding(string msisdn, string imoNumber, string description, string applicationId, string accessCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RegisterNewTerminalWithoutAdding", ReplyAction="http://tempuri.org/IService/RegisterNewTerminalWithoutAddingResponse")]
+        System.Threading.Tasks.Task<IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse> RegisterNewTerminalWithoutAddingAsync(string msisdn, string imoNumber, string description, string applicationId, string accessCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,6 +131,14 @@ namespace IRIDIUM_GMDSS_LRIT.AdminWebUI.IridiumGmdssLritWcfService {
         
         public System.Threading.Tasks.Task<IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse> DeregisterTerminalAsync(string msisdn, string applicationId, string accessCode) {
             return base.Channel.DeregisterTerminalAsync(msisdn, applicationId, accessCode);
+        }
+        
+        public IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse RegisterNewTerminalWithoutAdding(string msisdn, string imoNumber, string description, string applicationId, string accessCode) {
+            return base.Channel.RegisterNewTerminalWithoutAdding(msisdn, imoNumber, description, applicationId, accessCode);
+        }
+        
+        public System.Threading.Tasks.Task<IRIDIUM_GMDSS_LRIT.Core.WcfService.GatewayServiceResponse> RegisterNewTerminalWithoutAddingAsync(string msisdn, string imoNumber, string description, string applicationId, string accessCode) {
+            return base.Channel.RegisterNewTerminalWithoutAddingAsync(msisdn, imoNumber, description, applicationId, accessCode);
         }
     }
 }

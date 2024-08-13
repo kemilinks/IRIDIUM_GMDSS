@@ -105,7 +105,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
                         this.dataReportMgr.InsertDataReport(report);
                     }
                     else
-                        KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, "Polled Data Report is expected from the pending activation source. But other come. Check!!!", "Source: " + source + ", data: " + data);
+                        KemiLogger.LogWriter.Log(KemiLogger.LogWriter.Level.SEVERE, decodedReport.ThraneReportEvent.ToString() + " Data Report is expected from the pending activation source. But other come. Check!!!", "Source: " + source + ", data: " + data);
                 }
                 else if (terminal.Status == TerminalStatus.Active)
                 {
@@ -114,7 +114,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
                     report.ReceivedTimestamp = DateTime.UtcNow;
                     report.Source = source;
                     report.Status = ReportStatus.New;
-
+                    report.Remarks = string.Empty;
 
                     this.dataReportMgr.InsertDataReport(report);
                 }
@@ -131,6 +131,7 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Mgr
                         report.ReceivedTimestamp = DateTime.UtcNow;
                         report.Source = source;
                         report.Status = ReportStatus.New;
+                        report.Remarks = string.Empty;
 
                         this.dataReportMgr.InsertDataReport(report);
 

@@ -91,6 +91,8 @@ namespace IRIDIUM_GMDSS_LRIT.Core.Dal
                             Command.Parameters.AddWithValue("@DEACTIVATION_TIMESTAMP", terminal.DeactivationTimestamp);
 
                         Command.Parameters.AddWithValue("@ID", terminal.Id);
+
+                        Command.ExecuteNonQuery();
                     }
                 }
             }

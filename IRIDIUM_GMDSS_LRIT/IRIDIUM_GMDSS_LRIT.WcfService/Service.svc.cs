@@ -50,5 +50,11 @@ namespace IRIDIUM_GMDSS_LRIT.WcfService
             TerminalMgr terminalMgr = new TerminalMgr();
             return terminalMgr.DeregisterTerminal(msisdn, applicationId, accessCode);
         }
+
+        public GatewayServiceResponse RegisterNewTerminalWithoutAdding(string msisdn, string imoNumber, string description, string applicationId, string accessCode)
+        {
+            TerminalMgr terminalMgr = new TerminalMgr();
+            return terminalMgr.RegisterNewTerminalWithoutAdding(msisdn, imoNumber, description, applicationId, accessCode);
+        }
     }
 }

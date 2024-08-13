@@ -41,13 +41,13 @@ namespace IRIDIUM_GMDSS_LRIT.TestConsole
             //Console.WriteLine("timer: " + timer + ", offset: " + offset);
             //Console.WriteLine("change_Interval_Command_In_Hex: " + change_Interval_Command_In_Hex);
 
-            Core.Entity.UI.Report decodedReport = Interpreter.DecodeReportFromTerminal(_REPORT_HEX);
-            IPositionForwarder forwarder = new IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020.Forwarder();
-            forwarder.EndPoint = "http://192.168.10.175/Conformance2020.Receiver.Service/Conformance2020Service.svc/";
-            forwarder.DoForward(2, "881631760049", "N", Convert.ToInt32(decodedReport.Latitude_Degree), Convert.ToInt32(decodedReport.Latitude_Minute), Convert.ToDouble(decodedReport.Latiitude_MinuteDecimal)
-                                                                 , "W", Convert.ToInt32(decodedReport.Longitude_Degree), Convert.ToInt32(decodedReport.Longitude_Minute), Convert.ToDouble(decodedReport.Longitude_MinuteDecimal)
-                                                                 , DateTime.UtcNow.Year, Convert.ToInt32(decodedReport.Month), Convert.ToInt32(decodedReport.Day)
-                                                                 , Convert.ToInt32(decodedReport.Hour), Convert.ToInt32(decodedReport.Minute), 00, DateTime.UtcNow);
+            //Core.Entity.UI.Report decodedReport = Interpreter.DecodeReportFromTerminal(_REPORT_HEX);
+            //IPositionForwarder forwarder = new IRIDIUM_GMDSS_LRIT.Forwarder.Conformance2020.Forwarder();
+            //forwarder.EndPoint = "http://192.168.10.175/Conformance2020.Receiver.Service/Conformance2020Service.svc/";
+            //forwarder.DoForward(2, "881631760049", "N", Convert.ToInt32(decodedReport.Latitude_Degree), Convert.ToInt32(decodedReport.Latitude_Minute), Convert.ToDouble(decodedReport.Latiitude_MinuteDecimal)
+            //                                                     , "W", Convert.ToInt32(decodedReport.Longitude_Degree), Convert.ToInt32(decodedReport.Longitude_Minute), Convert.ToDouble(decodedReport.Longitude_MinuteDecimal)
+            //                                                     , DateTime.UtcNow.Year, Convert.ToInt32(decodedReport.Month), Convert.ToInt32(decodedReport.Day)
+            //                                                     , Convert.ToInt32(decodedReport.Hour), Convert.ToInt32(decodedReport.Minute), 00, DateTime.UtcNow);
             //Interpreter.DecodeComandFromTerminal(_COMMAND_HEX);
 
             //DataReportDal reportDal = new DataReportDal();
@@ -93,8 +93,8 @@ namespace IRIDIUM_GMDSS_LRIT.TestConsole
             //    Console.WriteLine(combinedSMS);
             //}
 
-            //DataMgr dataMgr = new DataMgr();
-            //dataMgr.ProcessIncomingData("DeliverSm received : Sequence: 1, SourceAddress: 881631760049, Coding: OctetUnspecified, Text: cc0af0c0971b3f00480f01e0cc0af04df12031d3d8743700");
+            DataMgr dataMgr = new DataMgr();
+            dataMgr.ProcessIncomingData("DeliverSm received : Sequence: 1295, SourceAddress: 881641707025, Coding: OctetUnspecified, Text: cc0af0c000000000000000e0cc0af047d709e68559501500", "*993003");
 
             Console.ReadLine();
         }

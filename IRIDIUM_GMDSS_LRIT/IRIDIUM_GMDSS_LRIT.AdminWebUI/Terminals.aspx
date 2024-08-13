@@ -14,6 +14,7 @@
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Id" />
                     <asp:BoundField DataField="MSISDN" HeaderText="MSISDN" />
+                    <asp:BoundField DataField="IMONumber" HeaderText="IMO Number" />
                     <asp:BoundField DataField="Status" HeaderText="Status" />
                     <asp:BoundField DataField="Description" HeaderText="Description" />
                     <asp:BoundField DataField="Remark" HeaderText="Remark" />
@@ -31,6 +32,74 @@
                 <SortedDescendingCellStyle BackColor="#EAEAD3" />
                 <SortedDescendingHeaderStyle BackColor="#575357" />
             </asp:GridView>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <b><u>Add New LT-3100s Terminal</u></b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-9">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    MDISDN
+                </div>
+                <div class="col-md-9">
+                    <asp:TextBox ID="txtMSISDN" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    IMO Number
+                </div>
+                <div class="col-md-9">
+                    <asp:TextBox ID="txtIMONumber" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    Description
+                </div>
+                <div class="col-md-9">
+                    <asp:TextBox ID="txtDescription" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    Remarks
+                </div>
+                <div class="col-md-9">
+                    <asp:TextBox ID="txtRemarks" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    Application IDs [,]
+                </div>
+                <div class="col-md-9">
+                    <asp:TextBox ID="txtApplicationIDs" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <asp:Button ID="btnAddNewTerminal" runat="server" Text="Add New Terminal" OnClick="btnAddNewTerminal_Click" />
+                    <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
         </div>
     </div>
 </asp:Content>

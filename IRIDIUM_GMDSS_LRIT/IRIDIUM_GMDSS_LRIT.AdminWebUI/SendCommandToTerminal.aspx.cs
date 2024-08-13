@@ -47,7 +47,7 @@ namespace IRIDIUM_GMDSS_LRIT.AdminWebUI
                     return;
                 }
 
-                GatewayServiceResponse response = serviceClient.RegisterNewTerminal(destination, imoNumber, string.Empty, _APP_ID, _ACCESS_CODE);
+                GatewayServiceResponse response = serviceClient.RegisterNewTerminalWithoutAdding(destination, imoNumber, string.Empty, _APP_ID, _ACCESS_CODE);
                 if (response.isSuccessful)
                     lblMessage.Text = "Command Submitted.";
                 else
